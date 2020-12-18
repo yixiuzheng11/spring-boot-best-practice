@@ -19,4 +19,9 @@ public class OrderInfo {
 
     private Date time;
 
+    public OrderInfo(String orderNo, long amount, Date time) {
+        this.orderNo = orderNo;
+        this.amount = amount;
+        this.time = time;
+    }
 }

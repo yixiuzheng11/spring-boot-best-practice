@@ -24,4 +24,27 @@ public class UserXml {
     @JacksonXmlProperty(localName = "order_info")
     private List<OrderInfo> orderList;
 
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public List<OrderInfo> getOrderList() {
+        return orderList;
+    }
+
+    public void setOrderList(List<OrderInfo> orderList) {
+        this.orderList = orderList;
+    }
 }
