@@ -21,6 +21,8 @@ public class Application {
     public User getUserInfo(@PathVariable("userId") String userId) {
         User user = new User("Java技术栈", 18);
         user.setId(Long.valueOf(userId));
+        user.setMemo("啦啦啦");
+        user.setAddress("宝安");
         return user;
     }
 
