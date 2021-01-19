@@ -1,4 +1,4 @@
-package cn.javastack.springboot.autoconfigure;
+package cn.javastack.springboot.config;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

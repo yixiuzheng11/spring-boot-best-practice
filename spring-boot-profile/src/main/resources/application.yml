@@ -1,13 +1,20 @@
 spring:
   profiles:
     active:
-      - prodall
+      - testall
     group:
       prodall:
         - prod
         - prodmq
         - proddb
-
+      devall:
+        - dev
+        - devdb
+        - devmq
+      testall:
+        - test
+        - testdb
+        - testmq
 ---
 spring.config.activate.on-profile: dev
 
@@ -17,12 +24,43 @@ server:
   port: 8080
 
 ---
+spring.config.activate.on-profile: devdb
+
+db:
+  name: mysql_dev
+
+env: devdb
+
+---
+spring.config.activate.on-profile: devmq
+
+mq:
+  address: mq_dev
+
+env: devmq
+
+---
 spring.config.activate.on-profile: test
 
 env: test
 
 server:
   port: 8081
+---
+spring.config.activate.on-profile: testdb
+
+db:
+  name: mysql_test
+
+env: testdb
+
+---
+spring.config.activate.on-profile: testmq
+
+mq:
+  address: mq_test
+
+env: testmq
 
 ---
 spring.config.activate.on-profile: prod
@@ -36,7 +74,7 @@ server:
 spring.config.activate.on-profile: proddb
 
 db:
-  name: mysql
+  name: mysql_prod
 
 env: proddb
 
@@ -44,6 +82,6 @@ env: proddb
 spring.config.activate.on-profile: prodmq
 
 mq:
-  address: localhost
+  address: mq_prod
 
 env: prodmq

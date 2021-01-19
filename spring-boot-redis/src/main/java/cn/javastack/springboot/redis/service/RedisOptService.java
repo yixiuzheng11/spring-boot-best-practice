@@ -46,7 +46,8 @@ public class RedisOptService {
                 if (length == 1) {
                     return redisTemplate.delete(key[0]);
                 } else {
-                    return redisTemplate.delete(CollectionUtils.arrayToList(key)) == length;
+                    //return redisTemplate.delete(CollectionUtils.arrayToList(key)) == length;
+                    return redisTemplate.delete((List)CollectionUtils.arrayToList(key)) == length;
                 }
             }
         }

@@ -1,16 +1,21 @@
 spring:
   profiles:
-    active: sentinel
+    active: standalone
 
 ---
 spring:
   profiles: standalone
   redis:
-    host: 192.168.10.38
-    port: 6379
-    password: redis@2019
+    host: 192.168.16.203
+    port: 7004
     database: 1
-
+    lettuce:
+      pool:
+        min-idle: 5
+        max-idle: 10
+        max-active: 8
+        max-wait: 1ms
+        shutdown-timeout: 100ms
 ---
 spring:
   profiles: sentinel

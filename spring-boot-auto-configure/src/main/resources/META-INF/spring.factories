@@ -1,2 +1,2 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-cn.javastack.springboot.autoconfigure.EnvAutoConfig
+cn.javastack.springboot.config.EnvAutoConfig
