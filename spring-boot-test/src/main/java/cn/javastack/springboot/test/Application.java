@@ -3,6 +3,7 @@ package cn.javastack.springboot.test;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -25,4 +26,11 @@ public class Application {
         return actResult;
     }
 
+    @PostMapping(value = "/test/getPostUser")
+    public ActResult getPostUser(@RequestParam("username") String username) {
+        ActResult actResult = new ActResult();
+        actResult.setData(username);
+        actResult.setMsg("javastack");
+        return actResult;
+    }
 }
