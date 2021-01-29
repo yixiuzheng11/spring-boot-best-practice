@@ -1,8 +1,9 @@
 package cn.javastack.service;
 
 import cn.javastack.dto.UserDto;
-import cn.javastack.model.User;
 import com.github.pagehelper.PageInfo;
+
+import java.util.List;
 
 /**
  * @author 0164631
@@ -22,5 +23,13 @@ public interface IUserService {
      * @param userDto 查询参数
      * @return
      */
-    PageInfo<User> findAllUser(UserDto userDto);
+    PageInfo<User> findPage(UserDto userDto);
+
+    /**
+     * 分页查询用户
+     *
+     * @param userDto 查询参数
+     * @return
+     */
+    List<User> findAll(UserDto userDto);
 }

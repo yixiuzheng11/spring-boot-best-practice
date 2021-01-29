@@ -1,3 +1,4 @@
+#端口设置
 server:
   port: 8080
 
@@ -31,10 +32,15 @@ spring:
       #打开PSCache，并指定每个连接上PSCache的大小。oracle设为true，mysql设为false。分库分表较多推荐设置为false
       pool-prepared-statements: false
       max-pool-prepared-statement-per-connection-size: 20
+
 ## 该配置节点为独立的节点，有很多同学容易将这个配置放在spring的节点下，导致配置无法被识别
 mybatis:
   mapper-locations: classpath:mapper/*.xml  #注意：一定要对应mapper映射xml文件的所在路径
   type-aliases-package: com.javastack.model  # 注意：对应实体类的路径
+mapper:
+  mapperscom: cn.javastack.utils.MyMapper    #这个MyMapper 就是我之前创建的mapper统一接口，后面所有的mapper类都会继承这个接口
+  not-empty: false
+  identity: MYSQL
 
 #pagehelper
 pagehelper:
@@ -43,3 +49,10 @@ pagehelper:
   supportMethodsArguments: true
   params: count=countSql
   returnPageInfo: check
+
+#控制台打印sql
+logging:
+  level:
+    cn:
+      javastack:
+        mapper: debug
