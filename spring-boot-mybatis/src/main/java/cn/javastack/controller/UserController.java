@@ -1,6 +1,7 @@
 package cn.javastack.controller;
 
 import cn.javastack.dto.UserDto;
+import cn.javastack.entity.User;
 import cn.javastack.service.IUserService;
 import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,13 +22,13 @@ public class UserController {
         return userService.addUser(userDto);
     }
 
-    @RequestMapping("/findAll")
-    public List<User> findAll(UserDto userDto){
-        return userService.findAll(userDto);
+    @RequestMapping("/findUserList")
+    public List<User> findUserList(UserDto userDto){
+        return userService.findUserList(userDto);
     }
 
-    @RequestMapping("/findPage")
-    public PageInfo<User> findPage(UserDto userDto){
-        return userService.findPage(userDto);
+    @RequestMapping("/findUserPage")
+    public PageInfo<User> findUserPage(UserDto userDto){
+        return userService.findUserPage(userDto);
     }
 }

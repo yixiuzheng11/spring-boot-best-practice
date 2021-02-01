@@ -1,6 +1,7 @@
 package cn.javastack.service;
 
 import cn.javastack.dto.UserDto;
+import cn.javastack.entity.User;
 import com.github.pagehelper.PageInfo;
 
 import java.util.List;
@@ -18,12 +19,12 @@ public interface IUserService {
     int addUser(UserDto userDto);
 
     /**
-     * 分页查询用户
+     * 查询用户列表
      *
      * @param userDto 查询参数
      * @return
      */
-    PageInfo<User> findPage(UserDto userDto);
+    List<User> findUserList(UserDto userDto);
 
     /**
      * 分页查询用户
@@ -31,5 +32,5 @@ public interface IUserService {
      * @param userDto 查询参数
      * @return
      */
-    List<User> findAll(UserDto userDto);
+    PageInfo<User> findUserPage(UserDto userDto);
 }
