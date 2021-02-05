@@ -1,4 +1,4 @@
-package cn.javastack.utils;
+package cn.tk;
 
 
 import tk.mybatis.mapper.common.Mapper;

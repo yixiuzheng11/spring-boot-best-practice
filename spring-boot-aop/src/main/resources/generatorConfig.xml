@@ -68,7 +68,7 @@
         <javaClientGenerator targetPackage="cn.javastack.mapper" targetProject="src/main/java" type="XMLMAPPER"/>
 
         <!-- table指定每个生成表的生成策略，表名和model实体类名，% 代表所有表-->
-        <table tableName="t_user" domainObjectName="User">
+        <table tableName="sys_log" domainObjectName="SysLog">
             <property name="ignoreQualifiersAtRuntime" value="false"/>
             <property name="useActualColumnNames" value="false"/>
             <property name="javaTargetPackage"  value="cn.javastack.entity" />

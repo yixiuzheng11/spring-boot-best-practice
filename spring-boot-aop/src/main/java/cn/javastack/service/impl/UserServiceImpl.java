@@ -3,7 +3,7 @@ package cn.javastack.service.impl;
 import cn.javastack.dto.UserDto;
 import cn.javastack.entity.User;
 import cn.javastack.mapper.UserMapper;
-import cn.javastack.service.IUserService;
+import cn.javastack.service.UserService;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import org.springframework.beans.BeanUtils;
@@ -16,7 +16,7 @@ import java.util.List;
  * @author 0164631
  */
 @Service
-public class UserService implements IUserService {
+public class UserServiceImpl implements UserService {
     @Autowired
     private UserMapper userMapper;
 

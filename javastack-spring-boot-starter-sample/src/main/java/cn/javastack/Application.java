@@ -1,4 +1,4 @@
-package cn.javastack.springboot.starter.sample;
+package cn.javastack;
 
 import cn.javastack.springboot.starter.service.TestService;
 import org.springframework.boot.CommandLineRunner;
