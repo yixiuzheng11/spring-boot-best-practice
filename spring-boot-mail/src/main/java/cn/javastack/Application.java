@@ -1,4 +1,4 @@
-package cn.javastack.springboot.mail;
+package cn.javastack;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;

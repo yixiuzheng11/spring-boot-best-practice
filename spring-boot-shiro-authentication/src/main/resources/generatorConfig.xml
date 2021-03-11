@@ -19,7 +19,7 @@
           2，MyBatis3Simple：类似MyBatis3，只是不生成XXXBySample；
       introspectedColumnImpl：类全限定名，用于扩展MBG
     -->
-    <context id="mysql" targetRuntime="MyBatis3" defaultModelType="flat">
+    <context id="mysql" targetRuntime="MyBatis3Simple" defaultModelType="flat">
         <!-- 自动识别数据库关键字，默认false，如果设置为true，根据SqlReservedWords中定义的关键字列表；
          一般保留默认值，遇到数据库关键字（Java关键字），使用columnOverride覆盖
         -->
@@ -31,11 +31,11 @@
         <property name="endingDelimiter" value="`"/>
 
         <!--添加自定义的继承接口-->
-        <!--<plugin type="tk.mybatis.mapper.generator.MapperPlugin">
+        <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
             <property name="mappers" value="cn.tk.MyMapper"/>
-            &lt;!&ndash;caseSensitive默认false，当数据库表名区分大小写时，可以将该属性设置为true&ndash;&gt;
+            <!--caseSensitive默认false，当数据库表名区分大小写时，可以将该属性设置为true-->
             <property name="caseSensitive" value="false"/>
-        </plugin>-->
+        </plugin>
         <commentGenerator>
             <!-- 是否取消自动生成的注释 -->
             <property name="suppressAllComments" value="false" />

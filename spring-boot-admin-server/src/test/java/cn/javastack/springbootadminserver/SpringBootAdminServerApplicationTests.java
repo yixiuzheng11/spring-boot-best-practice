@@ -1,13 +1,13 @@
-package cn.javastack;
+package cn.javastack.springbootadminserver;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SpringBootMybatisApplicationTests {
+class SpringBootAdminServerApplicationTests {
 
     @Test
     void contextLoads() {
-
     }
+
 }

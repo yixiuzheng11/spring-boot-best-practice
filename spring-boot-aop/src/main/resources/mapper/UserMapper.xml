@@ -9,6 +9,9 @@
     <result column="user_name" jdbcType="VARCHAR" property="userName" />
     <result column="password" jdbcType="VARCHAR" property="password" />
     <result column="phone" jdbcType="VARCHAR" property="phone" />
+    <result column="status" property="status" javaType="java.lang.String" jdbcType="VARCHAR"/>
+    <result column="creation_date" property="creationDate" javaType="java.util.Date" jdbcType="DATE"/>
+    <result column="created_by" jdbcType="BIGINT" property="createdBy" />
   </resultMap>
   <sql id="MysqlDialectSuffix">
     <if test="offset != null and limit != null">
